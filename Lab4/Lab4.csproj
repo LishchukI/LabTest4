@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IIG.BinaryFlag-main\**" />
+    <EmbeddedResource Remove="IIG.BinaryFlag-main\**" />
+    <None Remove="IIG.BinaryFlag-main\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.1" />
+    <PackageReference Include="coverlet.collector" Version="1.3.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="IIG.BinaryFlag-main\IIG.BinaryFlag\IIG.BinaryFlag.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IIG.DatabaseConnectionUtils">
+      <HintPath>E:\downloads\IIG.DatabaseConnectionUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="IIG.FileWorker">
+      <HintPath>E:\downloads\IIG.FileWorker.dll</HintPath>
+    </Reference>
+    <Reference Include="IIG.PasswordHashingUtils">
+      <HintPath>E:\downloads\IIG.PasswordHashingUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

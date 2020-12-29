@@ -1,0 +1,6 @@
+TestResults
+Lab4Tests/bin
+Lab4Tests/obj
+IIG.DatabaseConnectionUtils
+IIG.FileWorker
+.vs
