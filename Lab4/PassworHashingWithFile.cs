@@ -27,8 +27,8 @@ namespace Lab4Password
                 path + "PasswrodHashTest3.txt"));
 
             Assert.IsFalse(BaseFileWorker.Write(first_string, ""));
-            Assert.IsTrue(BaseFileWorker.Write(first_string, path + "PasswrodHashTest4"));
-            Assert.ThrowsException<OverflowException>(() => (BaseFileWorker.Write(PasswordHasher.GetHash("test", "укр_текст", 3), path + "PasswrodHashTest1.txt")));
+            Assert.ThrowsException<OverflowException>(() => (BaseFileWorker.Write(PasswordHasher.GetHash("test", "укр_текст", 3), 
+                path + "PasswrodHashTest1.txt")));
         }
 
         [TestMethod]
